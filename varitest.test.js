@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2 } = require("./variefunzioni");
+const { getInitials, createSlug, average, createSlug2, isPalindrome } = require("./variefunzioni");
 
 test("La funzione getInitials restituisce le iniziali di un nome completo.", () => {
   const result = getInitials("Francesco Moretti");
@@ -18,4 +18,9 @@ test("La funzione average calcola la media aritmetica di un array di numeri.", (
 test("La funzione createSlug sostituisce gli spazi con -.", () => {
   const result = createSlug2("Adesso sostituirò gli spazi");
   expect(result).toBe("Adesso-sostituirò-gli-spazi");
+});
+
+test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+  const result = isPalindrome("anna");
+  expect(result).toBeTruthy();
 });

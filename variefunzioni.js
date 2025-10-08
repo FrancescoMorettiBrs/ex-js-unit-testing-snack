@@ -30,4 +30,11 @@ function createSlug2(str) {
   return str.replaceAll(" ", "-");
 }
 
-module.exports = { getInitials, createSlug, average, createSlug2 };
+// Creare un test che verifichi la seguente descrizione:
+// 👉 "La funzione isPalindrome verifica se una stringa è un palindromo."
+
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
+
+module.exports = { getInitials, createSlug, average, createSlug2, isPalindrome };
