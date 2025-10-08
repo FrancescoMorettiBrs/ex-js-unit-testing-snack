@@ -37,4 +37,12 @@ function isPalindrome(str) {
   return str === str.split("").reverse().join("");
 }
 
-module.exports = { getInitials, createSlug, average, createSlug2, isPalindrome };
+// Creare un test che verifichi la seguente descrizione:
+// 👉 "La funzione createSlug3 lancia un errore se il titolo è vuoto o non valido."
+
+function createSlug3(title) {
+  if (!title || title.length < 4) throw new Error("Titolo mancante o non valido");
+  return;
+}
+
+module.exports = { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3 };
