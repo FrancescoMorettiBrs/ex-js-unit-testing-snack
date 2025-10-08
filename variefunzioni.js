@@ -23,4 +23,11 @@ function average(arr) {
   return total / arr.length;
 }
 
-module.exports = { getInitials, createSlug, average };
+// Creare un test che verifichi la seguente descrizione:
+// 👉 "La funzione createSlug2 sostituisce gli spazi con -."
+
+function createSlug2(str) {
+  return str.replaceAll(" ", "-");
+}
+
+module.exports = { getInitials, createSlug, average, createSlug2 };
