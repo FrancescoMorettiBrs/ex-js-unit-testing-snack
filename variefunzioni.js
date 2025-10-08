@@ -13,4 +13,14 @@ function createSlug(str) {
   return str.toLowerCase();
 }
 
-module.exports = { getInitials, createSlug };
+// Creare un test che verifichi la seguente descrizione:
+// 👉 "La funzione average calcola la media aritmetica di un array di numeri."
+
+function average(arr) {
+  const total = arr.reduce((acc, num) => {
+    return acc + num;
+  });
+  return total / arr.length;
+}
+
+module.exports = { getInitials, createSlug, average };
