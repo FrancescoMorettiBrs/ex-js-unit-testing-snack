@@ -45,4 +45,13 @@ function createSlug3(title) {
   return;
 }
 
-module.exports = { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3 };
+// Crea un array di oggetti posts, in cui ogni oggetto ha le proprietà id, title e slug.
+// Creare un test che verifichi le seguenti descrizioni:
+// 👉 "La funzione findPostById restituisce il post corretto dato l’array di post e l’id"
+// Creare uno o più test aggiuntivi che controllino che la struttura dati passati sia conforme (ogni post ha le proprietà id, title e slug, viene passato un id numerico).
+
+function findPostById(arr, id) {
+  return arr.find((post) => post.id === id);
+}
+
+module.exports = { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3, findPostById };

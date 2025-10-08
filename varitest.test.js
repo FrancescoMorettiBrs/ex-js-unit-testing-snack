@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3 } = require("./variefunzioni");
+const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3, findPostById } = require("./variefunzioni");
 
 test("La funzione getInitials restituisce le iniziali di un nome completo.", () => {
   const result = getInitials("Francesco Moretti");
@@ -27,4 +27,15 @@ test("La funzione isPalindrome verifica se una stringa è un palindromo.", () =>
 
 test("La funzione createSlug3 lancia un errore se il titolo è vuoto o non valido.", () => {
   expect(() => createSlug3("")).toThrow("Titolo mancante o non valido");
+});
+
+test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () => {
+  const posts = [
+    { id: 1, title: "Introduzione a JavaScript", slug: "introduzione-a-javascript" },
+    { id: 2, title: "Guida a React", slug: "guida-a-react" },
+    { id: 3, title: "Unit test con Jest", slug: "unit-test-con-jest" },
+    { id: 4, title: "Pattern in TypeScript", slug: "pattern-in-typescript" },
+    { id: 5, title: "Come creare uno slug", slug: "come-creare-uno-slug" },
+  ];
+  expect(findPostById(posts, 1)).toEqual({ id: 1, title: "Introduzione a JavaScript", slug: "introduzione-a-javascript" });
 });
